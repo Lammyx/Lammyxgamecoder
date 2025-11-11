@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Nullable>enable</Nullable>
+		<IsMac Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))'">true</IsMac>
+
+		<!-- For Windows users, please fill the folder path which contains Duckov.exe below -->
+		<!-- Windows 用户请在下面这行填写你的鸭科夫安装路径（包含 Duckov.exe 的目录），这样编译器就能找到相关的 dll 文件 -->
+		<DuckovPath>D:\Steam\steamapps\common\Escape from Duckov</DuckovPath>
+
+
+	</PropertyGroup>
+	<ItemGroup>
+		<Reference Include="$(DuckovPath)\Duckov_Data\Managed\TeamSoda.*" />
+		<Reference Include="$(DuckovPath)\Duckov_Data\Managed\ItemStatsSystem.dll" />
+		<Reference Include="$(DuckovPath)\Duckov_Data\Managed\Unity*" />
+		<None Remove="CustomPacks\mc\death.mp3" />
+		<None Remove="CustomPacks\mc\grenade_kill.mp3" />
+		<None Remove="CustomPacks\mc\headshot.mp3" />
+		<None Remove="CustomPacks\mc\headshot.png" />
+		<None Remove="CustomPacks\mc\Invicon_Diamond_Sword.png" />
+		<None Remove="CustomPacks\mc\kill.mp3" />
+		<None Remove="CustomPacks\mc\kill.png" />
+		<None Remove="CustomPacks\mc\kill2.mp3" />
+		<None Remove="CustomPacks\mc\kill2.png" />
+		<None Remove="CustomPacks\mc\kill3.mp3" />
+		<None Remove="CustomPacks\mc\kill3.png" />
+		<None Remove="CustomPacks\mc\kill4.mp3" />
+		<None Remove="CustomPacks\mc\kill4.png" />
+		<None Remove="CustomPacks\mc\kill5.mp3" />
+		<None Remove="CustomPacks\mc\kill5.png" />
+		<None Remove="CustomPacks\mc\kill6.mp3" />
+		<None Remove="CustomPacks\mc\kill6.png" />
+		<None Remove="CustomPacks\mc\kill7.mp3" />
+		<None Remove="CustomPacks\mc\kill7.png" />
+		<None Remove="CustomPacks\mc\kill8.mp3" />
+		<None Remove="CustomPacks\mc\kill8.png" />
+		<None Remove="CustomPacks\mc\melee_kill.mp3" />
+		<None Remove="CustomPacks\mc\melee_kill.png" />
+		<EmbeddedResource Include="CustomPacks\mc\death.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\grenade_kill.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\headshot.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\headshot.png" />
+		<EmbeddedResource Include="CustomPacks\mc\Invicon_Diamond_Sword.png" />
+		<EmbeddedResource Include="CustomPacks\mc\kill.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\kill.png" />
+		<EmbeddedResource Include="CustomPacks\mc\kill2.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\kill2.png" />
+		<EmbeddedResource Include="CustomPacks\mc\kill3.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\kill3.png" />
+		<EmbeddedResource Include="CustomPacks\mc\kill4.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\kill4.png" />
+		<EmbeddedResource Include="CustomPacks\mc\kill5.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\kill5.png" />
+		<EmbeddedResource Include="CustomPacks\mc\kill6.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\kill6.png" />
+		<EmbeddedResource Include="CustomPacks\mc\kill7.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\kill7.png" />
+		<EmbeddedResource Include="CustomPacks\mc\kill8.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\kill8.png" />
+		<EmbeddedResource Include="CustomPacks\mc\melee_kill.mp3" />
+		<EmbeddedResource Include="CustomPacks\mc\melee_kill.png" />
+		<Reference Include="$(DuckovPath)\Duckov_Data\Managed\FMODUnity.dll" />
+		<Reference Include="$(DuckovPath)\Duckov_Data\Managed\Newtonsoft.Json.dll" />
+	</ItemGroup>
+</Project>
